@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
 
 export const metadata: Metadata = {
-  title: "Creative Developer | Portfolio",
+  title: "Rendi Ody | Portfolio",
   description: "A showcase of my work and skills.",
 };
 

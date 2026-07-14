@@ -13,11 +13,11 @@ const config: Config = {
         display: ["var(--font-space)", "sans-serif"],
       },
       colors: {
-        background: "#050505",
-        foreground: "#f3f4f6",
+        background: "#020617", // Slate 950 - extremely elegant deep blue/black
+        foreground: "#f8fafc", // Slate 50
         primary: "#ffffff",
-        secondary: "#a1a1aa",
-        accent: "#3b82f6", // Nice blue for subtle accents
+        secondary: "#94a3b8", // Slate 400
+        accent: "#38bdf8", // Sky 400 - Professional and engaging blue
       },
     },
   },

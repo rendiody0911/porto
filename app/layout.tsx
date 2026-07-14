@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-[#050505] text-gray-200 antialiased min-h-screen flex flex-col selection:bg-white selection:text-black`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-background text-gray-200 antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black`}>
         {children}
       </body>
     </html>

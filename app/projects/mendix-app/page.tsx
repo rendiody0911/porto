@@ -43,15 +43,15 @@ export default function MendixProject() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl flex items-center justify-center group"
+              className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-[#030d22] flex items-center justify-center group"
             >
-              {/* Abstract Mendix IDE Representation */}
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
-              <div className="text-center z-10">
-                <Database className="w-16 h-16 text-blue-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
-                <div className="text-2xl font-bold text-white">Domain Model & Microflows</div>
-                <div className="text-slate-400 mt-2">Visual Application Architecture</div>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/mendix-logo.png"
+                alt="Mendix App Logo"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
             </motion.div>
           </div>
         </div>

@@ -27,6 +27,14 @@ const projects = [
     tags: ["Mendix", "Enterprise Architecture", "Low-Code", "Agile DevOps"],
     liveUrl: "/projects/mendix-app",
     githubUrl: "#",
+  },
+  {
+    title: "Kerja.in: Job-Training & Matching Platform",
+    description: "A digital job-training and matching platform designed to bridge the skills gap for fresh graduates. Features include skill profiling, structured video courses, BNSP-standard certifications, and a smart job matching engine.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+    tags: ["Product Management", "EdTech", "Job Matching", "System Design"],
+    liveUrl: "/projects/kerjain",
+    githubUrl: "#",
   }
 ];
 

@@ -33,7 +33,7 @@ export default function Hero() {
               <img
                 src="/profile.jpg"
                 alt="Rendi Ody Setiawan"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500"
               />
             </div>
           </div>

@@ -20,6 +20,25 @@ export default function Hero() {
           Open for Business Development Roles
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, type: "spring", bounce: 0.4 }}
+          className="mb-8 relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 rounded-full blur-xl opacity-40 animate-pulse" />
+          <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-tr from-accent via-purple-500 to-cyan-400">
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-black/50">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/profile.jpg"
+                alt="Rendi Ody Setiawan"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

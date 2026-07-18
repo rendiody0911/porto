@@ -62,28 +62,36 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Premium Photo */}
-        <div className="flex justify-center lg:justify-end order-1 lg:order-2 w-full">
+        {/* Right Column: Premium Colorful Photo */}
+        <div className="flex justify-center lg:justify-end order-1 lg:order-2 w-full" style={{ perspective: 1000 }}>
           <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-            className="group relative w-full max-w-[400px] lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-[#111] border border-white/10 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2"
+            initial={{ opacity: 0, scale: 0.95, rotateY: 15 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+            whileHover={{ 
+              scale: 1.03, 
+              rotateY: -5,
+              rotateX: 5,
+            }}
+            className="group relative w-full max-w-[400px] lg:max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-[3px] shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-500"
           >
-            {/* Subtle glow effect behind the image on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+            {/* Animated colorful glow behind */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700" />
             
-            <img
-              src="/profile-modern.png"
-              alt="Rendi Ody Setiawan"
-              className="w-full h-full object-cover object-top brightness-105 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-            
-            {/* Professional badge that appears on hover */}
-            <div className="absolute bottom-6 left-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 pointer-events-none">
-              <div className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium text-white shadow-lg flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Available for Hire
+            <div className="relative w-full h-full rounded-[1.8rem] overflow-hidden bg-[#e0e2e5] border border-white/20 z-10 shadow-inner">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/profile-modern.png"
+                alt="Rendi Ody Setiawan"
+                className="w-full h-full object-cover object-top brightness-105 contrast-105 group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+              
+              {/* Professional badge that appears on hover */}
+              <div className="absolute bottom-6 left-6 z-20 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75 pointer-events-none">
+                <div className="px-5 py-2.5 bg-black/50 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium text-white shadow-2xl flex items-center gap-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
+                  Available for Hire
+                </div>
               </div>
             </div>
           </motion.div>

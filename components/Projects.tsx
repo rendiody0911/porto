@@ -19,6 +19,14 @@ const projects = [
     tags: ["Data Analytics", "Power BI", "Financial Analysis", "Forecasting"],
     liveUrl: "/projects/business-performance-analytics",
     githubUrl: "#",
+  },
+  {
+    title: "Mendix Low-Code App: User Stories & Implementation",
+    description: "End-to-end development of a business application using the Mendix low-code platform. Translated business requirements into comprehensive User Stories, designed the database architecture, and implemented the working prototype.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    tags: ["Mendix", "User Stories", "Low-Code", "Agile"],
+    liveUrl: "/projects/mendix-app",
+    githubUrl: "#",
   }
 ];
 

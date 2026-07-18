@@ -78,21 +78,18 @@ export default function Hero() {
             transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
             className="relative w-full max-w-[320px] md:max-w-[400px] lg:max-w-full aspect-[3/4] lg:h-[80vh] lg:aspect-auto"
           >
-            {/* Premium backdrop frame */}
             <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-2xl transform rotate-3 scale-105" />
             
             <div className="relative w-full h-full rounded-[2rem] p-1 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-sm border border-white/10 shadow-2xl overflow-hidden group">
-              {/* The Photo */}
               <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-[#e0e2e5]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/profile-full.jpg"
+                  src="/profile.jpg"
                   alt="Rendi Ody Setiawan"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 brightness-105 contrast-105"
                 />
               </div>
               
-              {/* Subtle glass overlay gradient at the bottom for text integration if needed later */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
           </motion.div>

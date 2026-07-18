@@ -21,10 +21,10 @@ const projects = [
     githubUrl: "#",
   },
   {
-    title: "Mendix Low-Code App: User Stories & Implementation",
-    description: "End-to-end development of a business application using the Mendix low-code platform. Translated business requirements into comprehensive User Stories, designed the database architecture, and implemented the working prototype.",
+    title: "Mendix Enterprise Solution: Agile & Low-Code",
+    description: "Spearheaded the digital transformation of a business process into a scalable enterprise application. Architected relational domain models, mapped complex user flows via Agile methodology, and orchestrated automated backend microflows.",
     image: "/mendix-logo.png",
-    tags: ["Mendix", "User Stories", "Low-Code", "Agile"],
+    tags: ["Mendix", "Enterprise Architecture", "Low-Code", "Agile DevOps"],
     liveUrl: "/projects/mendix-app",
     githubUrl: "#",
   }

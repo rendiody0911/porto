@@ -32,10 +32,10 @@ export default function MendixProject() {
               </div>
               <h1 className="text-5xl lg:text-7xl font-display font-bold text-white mb-6 leading-[1.1] tracking-tight">
                 Mendix <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Low-Code Platform</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Enterprise Solution</span>
               </h1>
               <p className="text-xl text-slate-400 leading-relaxed mb-8">
-                A complete showcase of translating complex business requirements into structured Agile User Stories and rapidly developing them into a fully functional enterprise web application using Mendix.
+                Engineered a scalable enterprise application by translating complex operational bottlenecks into a streamlined digital ecosystem. Orchestrated the full Agile DevOps lifecycle from strategic User Story mapping to rapid low-code deployment.
               </p>
             </motion.div>
 

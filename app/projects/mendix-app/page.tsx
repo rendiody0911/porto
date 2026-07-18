@@ -1,124 +1,157 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Box, LayoutTemplate, Database, Workflow, CheckCircle2, Code2 } from "lucide-react";
+import { ArrowLeft, Layers, Users, Database, Zap, Lock, ShieldCheck, CheckSquare, Search } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function MendixProject() {
   return (
-    <main className="flex min-h-screen flex-col bg-background text-foreground relative selection:bg-white selection:text-black">
+    <main className="flex min-h-screen flex-col bg-[#020817] text-slate-200 relative selection:bg-blue-500/30">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 relative border-b border-white/5">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* Modern Split Hero Section */}
+      <section className="pt-32 pb-16 px-6 relative">
+        {/* Mendix-style blue glow */}
+        <div className="absolute top-[-20%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-blue-600/10 blur-[150px] pointer-events-none" />
         
-        <div className="max-w-4xl mx-auto relative z-10">
-          <Link href="/#projects" className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-8">
+        <div className="max-w-7xl mx-auto">
+          <Link href="/#projects" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12">
             <ArrowLeft className="w-4 h-4" /> Back to Portfolio
           </Link>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Mendix</span>
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Low-Code Development</span>
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Agile User Stories</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
-              Mendix Application: <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">User Stories & Rapid Implementation</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6">
-              An end-to-end low-code development project using the Mendix platform. This project showcases the translation of complex business requirements into structured Agile User Stories, followed by database design and rapid application prototyping.
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
+                <Layers className="w-4 h-4" /> Enterprise App Development
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-display font-bold text-white mb-6 leading-[1.1] tracking-tight">
+                Mendix <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Low-Code Platform</span>
+              </h1>
+              <p className="text-xl text-slate-400 leading-relaxed mb-8">
+                A complete showcase of translating complex business requirements into structured Agile User Stories and rapidly developing them into a fully functional enterprise web application using Mendix.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl flex items-center justify-center group"
+            >
+              {/* Abstract Mendix IDE Representation */}
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+              <div className="text-center z-10">
+                <Database className="w-16 h-16 text-blue-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
+                <div className="text-2xl font-bold text-white">Domain Model & Microflows</div>
+                <div className="text-slate-400 mt-2">Visual Application Architecture</div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Case Study Content */}
-      <section className="py-16 px-6 relative">
-        <div className="max-w-4xl mx-auto space-y-24">
+      {/* Bento Grid Content Section */}
+      <section className="py-24 px-6 relative z-10 bg-gradient-to-b from-[#020817] to-slate-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Project Implementation Details</h2>
+            <p className="text-slate-400 text-lg">Detailed breakdown of the Agile process, database modeling, and business logic execution.</p>
+          </div>
 
-          {/* 1. User Stories & Agile Planning */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <LayoutTemplate className="text-blue-400 w-8 h-8" /> 1. Agile Planning & User Stories
-            </h3>
-            <div className="prose prose-invert max-w-none text-secondary">
-              <p>
-                The foundation of the application was built on detailed requirement gathering and Agile methodology. Business requirements were broken down into manageable <strong>Epics</strong> and <strong>User Stories</strong> to ensure a user-centric development process.
-              </p>
-              <div className="glass p-6 rounded-2xl mt-6 border border-white/5">
-                <h4 className="text-white mt-0 mb-4 flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-accent"/> Key Deliverables:</h4>
-                <ul className="space-y-3">
-                  <li><strong>Comprehensive Backlog:</strong> Documented roles, goals, and acceptance criteria in Excel to serve as the single source of truth for the development team.</li>
-                  <li><strong>Sprint Planning:</strong> Prioritized features based on business value (MoSCoW method) to ensure the MVP (Minimum Viable Product) was delivered on time.</li>
-                  <li><strong>Role-Based Access Control (RBAC):</strong> Defined specific user personas (e.g., Admin, User, Manager) to structure data visibility and UI access.</li>
+          {/* Bento Box Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(280px,auto)]">
+            
+            {/* Box 1: User Stories (Spans 2 cols) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-2 rounded-3xl bg-slate-900/40 border border-slate-800 p-8 hover:bg-slate-900/60 transition-colors relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10"><Users className="w-32 h-32 text-blue-500" /></div>
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3 relative z-10">
+                <CheckSquare className="text-blue-400" /> Agile User Stories
+              </h3>
+              <div className="text-slate-400 space-y-4 relative z-10 max-w-xl">
+                <p>
+                  The project initiated with comprehensive requirement gathering, translating business needs into standard Agile formats: <em>"As a [Role], I want to [Action], so that [Benefit]."</em>
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-sm text-slate-300">
+                  <li><strong>Roles Defined:</strong> Administrator, Manager, and Staff User.</li>
+                  <li><strong>Acceptance Criteria:</strong> Clear definitions of done for data entry validation, report generation, and security access.</li>
+                  <li><strong>Sprint Backlog:</strong> Prioritized features using MoSCoW methodology, focusing on core CRUD operations and role-based dashboards first.</li>
                 </ul>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* 2. Mendix Domain Model (Database) */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Database className="text-purple-400 w-8 h-8" /> 2. Domain Model Architecture
-            </h3>
-            <p className="text-secondary mb-8">
-              In Mendix, the database is visually designed using the Domain Model. We architected a relational model that strictly adheres to normalization principles while optimizing for Mendix's object-oriented nature.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="border border-white/10 rounded-2xl p-6 bg-black/20">
-                <h4 className="text-xl font-bold text-white mb-2">Entity Relationships</h4>
-                <p className="text-secondary text-sm">Designed 1-to-many and many-to-many associations tailored for the business process, ensuring data integrity across the application.</p>
-              </div>
-              <div className="border border-white/10 rounded-2xl p-6 bg-black/20">
-                <h4 className="text-xl font-bold text-white mb-2">Security & Validation</h4>
-                <p className="text-secondary text-sm">Implemented entity-level access rules and automated data validation directly within the Domain Model to prevent bad data entry.</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 3. Microflows & Logic */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Workflow className="text-green-400 w-8 h-8" /> 3. Business Logic (Microflows)
-            </h3>
-            <div className="space-y-6 text-secondary">
-              <p>
-                To handle complex calculations and backend processes without writing traditional code, we utilized Mendix <strong>Microflows</strong> and <strong>Nanoflows</strong>.
+            {/* Box 2: Domain Model */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="rounded-3xl bg-blue-900/10 border border-blue-900/30 p-8 hover:bg-blue-900/20 transition-colors"
+            >
+              <Database className="w-10 h-10 text-teal-400 mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Domain Model</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Architected the visual database schema in Mendix Studio Pro. Designed optimized 1-to-M and M-to-M associations to ensure strict data normalization and relational integrity between business entities.
               </p>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Automated status updates and email notifications upon task completion.</li>
-                <li>Created custom data retrieval mechanisms that filter lists based on the active user's permissions.</li>
-                <li>Implemented error-handling routines (custom pop-ups and rollback mechanics) to ensure the application remains stable during edge cases.</li>
-              </ul>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* 4. UI/UX Implementation */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Box className="text-orange-400 w-8 h-8" /> 4. UI/UX & Page Building
-            </h3>
-            <p className="text-secondary mb-8">
-              The front-end was rapidly assembled using Mendix's Atlas UI framework. We prioritized usability and responsiveness.
-            </p>
-            <div className="glass p-6 rounded-2xl border border-white/5">
-              <p className="text-secondary">
-                Dashboards, data grids, and data views were configured to provide a seamless user experience. By utilizing conditional visibility, the interface dynamically adapts to show only the information relevant to the current user's role and the specific state of the data.
+            {/* Box 3: Microflows (Spans 1 col) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 hover:bg-slate-900/60 transition-colors"
+            >
+              <Zap className="w-10 h-10 text-yellow-400 mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Microflows & Logic</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Replaced traditional backend code with visual Microflows. Handled complex calculations, automated status transitions, custom error handling routines, and data retrieval filters triggered by UI events.
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
 
+            {/* Box 4: Security (Spans 2 cols) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-2 rounded-3xl bg-slate-900/40 border border-slate-800 p-8 flex flex-col justify-between hover:bg-slate-900/60 transition-colors"
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                  <ShieldCheck className="text-blue-400" /> Security & UI Integration
+                </h3>
+                <p className="text-slate-400 mb-6 max-w-2xl">
+                  Built the frontend using Mendix Atlas UI with a focus on Role-Based Access Control (RBAC). The UI dynamically adapts based on entity-level security rules.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-black/30 p-4 rounded-2xl border border-white/5">
+                  <Lock className="w-6 h-6 text-slate-300 mb-2" />
+                  <h4 className="text-white font-medium mb-1">Entity Access</h4>
+                  <p className="text-xs text-slate-400">Read/Write permissions strictly controlled at the database level.</p>
+                </div>
+                <div className="bg-black/30 p-4 rounded-2xl border border-white/5">
+                  <Search className="w-6 h-6 text-slate-300 mb-2" />
+                  <h4 className="text-white font-medium mb-1">Conditional UI</h4>
+                  <p className="text-xs text-slate-400">Buttons and data grids dynamically hidden based on user role.</p>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 

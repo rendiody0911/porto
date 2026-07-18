@@ -43,15 +43,15 @@ export default function MendixProject() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-[#030d22] flex items-center justify-center group"
+              className="relative w-full max-w-[550px] aspect-[16/10] rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(37,99,235,0.2)] bg-[#030d22] flex items-center justify-center group mx-auto lg:mx-0"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/mendix-logo.png"
-                alt="Mendix App Logo"
+                src="/projects/mendix_mockup.png"
+                alt="Mendix App Mockup"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-teal-400/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
             </motion.div>
           </div>
         </div>

@@ -15,34 +15,53 @@ export default function BusinessAnalyticsProject() {
       <section className="pt-32 pb-16 px-6 relative border-b border-white/5">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
         
-        <div className="max-w-4xl mx-auto relative z-10">
-          <Link href="/#projects" className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4" /> Back to Portfolio
-          </Link>
-          
+        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1">
+            <Link href="/#projects" className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-8">
+              <ArrowLeft className="w-4 h-4" /> Back to Portfolio
+            </Link>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Data Analytics</span>
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Power BI</span>
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Financial Analysis</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-6 leading-tight">
+                PT Bank Rakyat Indonesia (BRI): <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-200">Business & Performance Analytics</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6 max-w-xl">
+                A comprehensive analytical review of PT BRI's financial and operational performance from 2019 to 2023. By leveraging advanced data analytics, this project identified key growth drivers, projected future asset trends, and formulated actionable strategic recommendations.
+              </p>
+              
+              <a href="https://app.powerbi.com/links/ebvbklST58?ctid=3485b963-82ba-4a6f-810f-b5cc226ff898&pbi_source=linkShare" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black rounded-full font-medium hover:bg-gray-200 transition-colors">
+                <BarChart3 className="w-4 h-4" /> View Power BI Dashboard
+              </a>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.95, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.7, type: "spring", bounce: 0.3, delay: 0.2 }}
+            className="order-1 lg:order-2 w-full flex justify-center"
           >
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Data Analytics</span>
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Power BI</span>
-              <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Financial Analysis</span>
+            <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-cyan-400/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/projects/analytics_mockup.png"
+                alt="Business Performance Analytics Mockup"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
-              PT Bank Rakyat Indonesia (BRI): <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-200">Business & Performance Analytics</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6">
-              A comprehensive analytical review of PT BRI's financial and operational performance from 2019 to 2023. By leveraging advanced data analytics, this project identified key growth drivers, projected future asset trends, and formulated actionable strategic recommendations.
-            </p>
-            
-            <a href="https://app.powerbi.com/links/ebvbklST58?ctid=3485b963-82ba-4a6f-810f-b5cc226ff898&pbi_source=linkShare" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black rounded-full font-medium hover:bg-gray-200 transition-colors">
-              <BarChart3 className="w-4 h-4" /> View Power BI Dashboard
-            </a>
           </motion.div>
         </div>
       </section>

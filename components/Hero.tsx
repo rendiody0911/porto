@@ -26,14 +26,14 @@ export default function Hero() {
           transition={{ duration: 0.5, type: "spring", bounce: 0.4 }}
           className="mb-8 relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 rounded-full blur-xl opacity-40 animate-pulse" />
-          <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-tr from-accent via-purple-500 to-cyan-400">
-            <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-black/50">
+          <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
+          <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full p-1.5 bg-gradient-to-tr from-accent via-purple-500 to-cyan-400 shadow-2xl">
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/profile.jpg"
                 alt="Rendi Ody Setiawan"
-                className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500 brightness-110 contrast-105"
               />
             </div>
           </div>

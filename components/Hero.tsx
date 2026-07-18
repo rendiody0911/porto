@@ -62,20 +62,31 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Clean Photo */}
+        {/* Right Column: Premium Photo */}
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 w-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative w-full max-w-[400px] lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-[#111] border border-white/5"
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            className="group relative w-full max-w-[400px] lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-[#111] border border-white/10 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2"
           >
+            {/* Subtle glow effect behind the image on hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+            
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/profile.jpg"
               alt="Rendi Ody Setiawan"
-              className="w-full h-full object-cover object-top grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover object-top brightness-105 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
             />
+            
+            {/* Professional badge that appears on hover */}
+            <div className="absolute bottom-6 left-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 pointer-events-none">
+              <div className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium text-white shadow-lg flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Available for Hire
+              </div>
+            </div>
           </motion.div>
         </div>
 

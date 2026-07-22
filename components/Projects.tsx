@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Jaya Mandiri Trans - Digital Transformation",
     description: "Led the digital transformation of a tourist bus rental company in Bandung. Designed and conceptualized an integrated mobile application to automate booking, payment, schedule management, and AI-driven fleet recommendations, effectively replacing their manual WhatsApp-based operations.",
-    image: "/mockup.png",
+    image: "/projects/jaya_mandiri_poster.jpg",
     tags: ["Business Analysis", "System Design", "UI/UX", "Product Management"],
     liveUrl: "/projects/jaya-mandiri-trans",
     githubUrl: "#",

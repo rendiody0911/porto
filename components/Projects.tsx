@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Business and Performance Analytics: PT BRI",
     description: "A comprehensive data analysis of PT Bank Rakyat Indonesia (BRI) performance from 2019 to 2023. Utilized Descriptive, Diagnostic, Predictive, and Prescriptive analytics to uncover insights and provide strategic recommendations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    image: "/projects/analytics_finance.png",
     tags: ["Data Analytics", "Power BI", "Financial Analysis", "Forecasting"],
     liveUrl: "/projects/business-performance-analytics",
     githubUrl: "#",

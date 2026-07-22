@@ -53,13 +53,13 @@ export default function BusinessAnalyticsProject() {
             transition={{ duration: 0.7, type: "spring", bounce: 0.3, delay: 0.2 }}
             className="order-1 lg:order-2 w-full flex justify-center"
           >
-            <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-cyan-400/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10" />
+            <div className="relative w-full max-w-[600px] aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group bg-white p-2">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-cyan-400/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/projects/analytics_mockup.png"
-                alt="Business Performance Analytics Mockup"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                src="/projects/analytics_finance.png"
+                alt="Finance Dashboard Mockup"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
           </motion.div>
@@ -104,23 +104,39 @@ export default function BusinessAnalyticsProject() {
               <LineChart className="text-green-400 w-8 h-8" /> 2. Key Findings & Dashboard Insights
             </h3>
             
-            <div className="space-y-8">
-              <div className="glass p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><PieChart className="w-5 h-5 text-accent"/> Finance</h4>
-                <p className="text-secondary text-sm">
-                  Total assets showed stable upward trends, peaking at Rp2 Trillion in 2023 (representing 23.02% of the 5-year total). This solidifies BRI's strong financial positioning for long-term strategic investments.
-                </p>
+            <div className="space-y-12">
+              <div className="glass p-8 rounded-2xl">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h4 className="text-2xl font-bold text-white mb-4 flex items-center gap-2"><PieChart className="w-6 h-6 text-accent"/> Finance Performance</h4>
+                    <p className="text-secondary text-base leading-relaxed">
+                      Total assets showed stable upward trends, peaking at Rp2 Trillion in 2023 (representing 23.02% of the 5-year total). Profit generation also demonstrated robust growth before a slight dip, signaling a solid financial base ready for strategic optimization.
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-white/20 p-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/projects/analytics_finance.png" alt="Finance Dashboard" className="w-full h-auto rounded-lg" />
+                  </div>
+                </div>
               </div>
 
-              <div className="glass p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><Target className="w-5 h-5 text-accent"/> Marketing & Sales</h4>
-                <p className="text-secondary text-sm">
-                  Sales performance data revealed highly unequal distributions among employees. Certain individuals dominated specific transaction types (e.g., transfers vs. purchases), indicating a need for team collaboration improvements and targeted upskilling.
-                </p>
+              <div className="glass p-8 rounded-2xl">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  <div className="order-2 lg:order-1 bg-white rounded-xl overflow-hidden shadow-lg border border-white/20 p-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/projects/analytics_sales.png" alt="Sales Dashboard" className="w-full h-auto rounded-lg" />
+                  </div>
+                  <div className="order-1 lg:order-2">
+                    <h4 className="text-2xl font-bold text-white mb-4 flex items-center gap-2"><Target className="w-6 h-6 text-accent"/> Sales & Marketing</h4>
+                    <p className="text-secondary text-base leading-relaxed">
+                      Sales performance data revealed highly unequal distributions among employees. Specific transaction types (e.g., transfers vs. purchases) are dominated by top performers. This dashboard highlights the urgent need for targeted upskilling and collaborative marketing efforts.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="glass p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><TrendingUp className="w-5 h-5 text-accent"/> Operations</h4>
+              <div className="glass p-8 rounded-2xl">
+                <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><TrendingUp className="w-5 h-5 text-accent"/> Operations Highlight</h4>
                 <p className="text-secondary text-sm">
                   Net profit experienced significant fluctuations. Profit peaked in 2022 (contributing 47.82% of the 5-year total) but saw a notable drop in 2023, signaling challenges in operational efficiency that require immediate strategic realignment.
                 </p>

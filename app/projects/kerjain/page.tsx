@@ -11,87 +11,65 @@ export default function KerjainProject() {
     <main className="flex min-h-screen flex-col bg-[#f8f9fa] text-slate-800 relative selection:bg-blue-200">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative bg-white border-b border-slate-200 overflow-hidden">
-        {/* Subtle background abstract */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-blue-100 to-transparent rounded-full blur-[100px] pointer-events-none opacity-50" />
+      {/* Hero Section (Matching Slide Design) */}
+      <section className="pt-32 pb-20 px-6 relative bg-[#3e4246] overflow-hidden min-h-[90vh] flex items-center">
+        {/* Subtle background glow from the right */}
+        <div className="absolute top-0 right-0 w-full h-full pointer-events-none">
+          <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-blue-400/10 rounded-full blur-[120px]" />
+        </div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
-          <Link href="/#projects" className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors mb-8 font-medium">
+        <div className="max-w-7xl mx-auto w-full relative z-10">
+          <Link href="/#projects" className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-12 font-medium">
             <ArrowLeft className="w-4 h-4" /> Back to Portfolio
           </Link>
           
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="lg:col-span-7"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
             >
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wide">IT Project Management</span>
-                <span className="text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wide">EdTech</span>
-                <span className="text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wide">System Design</span>
+              <div className="flex items-center gap-2 mb-10 text-white font-bold text-xl tracking-tight">
+                {/* Salford Logo Mock */}
+                <div className="w-8 h-8 relative flex items-center justify-center">
+                  <div className="absolute w-full h-full border-2 border-white rounded-full opacity-50" />
+                  <div className="absolute w-4 h-4 border-2 border-white rounded-full" />
+                </div>
+                Salford
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-display font-black text-slate-900 mb-6 leading-tight tracking-tight">
-                Kerja.in <br />
-                <span className="text-blue-600 font-bold text-3xl md:text-5xl">Digital Job-Training & Matching Platform</span>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-black text-white mb-10 leading-[1.05] tracking-tight">
+                Introduction <br />
+                Kerja.in
               </h1>
               
-              <p className="text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
-                A comprehensive system designed to bridge the skills gap for fresh graduates. The platform integrates structured video courses, BNSP-standard competency certifications, and a smart job-matching engine to connect job-ready talents with recruiters.
-              </p>
+              <div className="space-y-6 text-lg text-slate-300 leading-relaxed max-w-xl font-medium">
+                <p>
+                  Kerja.in is a digital, job-training application designed to prepare fresh graduates to enter the professional workforce in a standardized manner and in line with industry needs. The platform offers a variety of video courses, real project-based training programs (project-based learning), and competency certifications that refer to the standards of the National Professional Certification Agency (BNSP).
+                </p>
+                <p>
+                  In addition to training, Kerja.in also functions as a bridge between participants (talent) and employers through a talent pool system and job-matching services.
+                </p>
+              </div>
             </motion.div>
 
+            {/* Right Column: Illustration cropped from the slide */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              initial={{ opacity: 0, scale: 0.95, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative w-full h-[500px] lg:h-[700px] flex justify-end items-center"
             >
-              <div className="aspect-[4/5] bg-slate-900 rounded-3xl p-8 text-white shadow-2xl flex flex-col justify-between overflow-hidden relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Project Success KPIs</h3>
-                  <p className="text-slate-400 text-sm mb-8">Target Metrics for Year 1</p>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-                        <Users className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold">5,000+</div>
-                        <div className="text-sm text-slate-400">Monthly Active Users</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-                        <Target className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold">100+</div>
-                        <div className="text-sm text-slate-400">Successful Job Matches</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
-                        <GraduationCap className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold">500+</div>
-                        <div className="text-sm text-slate-400">Certified Talents (BNSP)</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-8 mt-8 border-t border-white/10">
-                  <div className="text-sm text-slate-400">Estimated ROI (Year 1)</div>
-                  <div className="text-4xl font-black text-emerald-400">2.56%</div>
-                </div>
+              {/* We use the uploaded image but crop it to only show the right-side illustration */}
+              <div className="absolute right-[-10%] lg:right-[-20%] w-[800px] h-[800px] overflow-hidden rounded-full flex items-center justify-center mask-radial">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/projects/kerjain_intro.png" 
+                  alt="Kerja.in Illustration" 
+                  className="absolute w-[200%] max-w-none object-cover"
+                  style={{ right: "-5%", top: "50%", transform: "translateY(-50%)" }}
+                />
               </div>
             </motion.div>
           </div>

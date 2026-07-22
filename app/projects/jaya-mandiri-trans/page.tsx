@@ -27,18 +27,18 @@ export default function ProjectDetail() {
               transition={{ duration: 0.5 }}
             >
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Business Analysis</span>
-                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">System Design</span>
-                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">UI/UX</span>
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">Web Development</span>
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">System Information</span>
+                <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">AI Integration</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-6 leading-tight">
                 Jaya Mandiri Trans: <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">Digital Transformation</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-200">Sistem Informasi Penyewaan</span>
               </h1>
               
               <p className="text-lg md:text-xl text-secondary leading-relaxed mb-6 max-w-xl">
-                A comprehensive system analysis and design project aimed at modernizing a conventional tourist bus rental company in Bandung. We conceptualized an integrated mobile application to automate booking, schedule management, and fleet maintenance.
+                Pengembangan sistem informasi berbasis website untuk mendigitalisasi proses penyewaan bus pariwisata di Kota Bandung. Proyek ini mengintegrasikan booking online, manajemen armada, penjadwalan, hingga rekomendasi AI.
               </p>
               
               <a href="https://www.figma.com/design/nnKWOPAFkdkCgWYaluzZh9/JAYA-MANDIRI-TRANS" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black rounded-full font-medium hover:bg-gray-200 transition-colors">
@@ -70,121 +70,131 @@ export default function ProjectDetail() {
       <section className="py-16 px-6 relative">
         <div className="max-w-4xl mx-auto space-y-24">
 
-          {/* 1. Background & Problem */}
+          {/* 1. Latar Belakang & Permasalahan */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Search className="text-red-400 w-8 h-8" /> 1. Background & AS-IS Process
+              <Search className="text-red-400 w-8 h-8" /> 1. Latar Belakang & Permasalahan
             </h3>
             <div className="prose prose-invert max-w-none text-secondary">
               <p>
-                Jaya Mandiri Trans is a tourist bus rental company in Bandung providing fleets ranging from Medium Buses (31 seats) to Big Buses (59 seats). Despite their scale, their operational processes were heavily reliant on manual communication via <strong>WhatsApp</strong> and data recording on <strong>Microsoft Excel</strong>.
+                Jaya Mandiri Trans merupakan perusahaan penyewaan bus pariwisata di Kota Bandung yang melayani perjalanan wisata, study tour, dan perjalanan perusahaan. Namun, proses bisnis yang berjalan saat ini masih dilakukan secara semi-manual menggunakan <strong>WhatsApp</strong> dan <strong>Microsoft Excel</strong> sehingga menyebabkan proses booking, pembayaran, penjadwalan armada, dan pengelolaan data menjadi kurang efisien.
               </p>
-              <h4 className="text-white mt-6 mb-2">Key Pain Points:</h4>
-              <ul className="space-y-2">
-                <li><strong className="text-white">Manual Booking:</strong> High risk of double-booking due to unintegrated Excel schedules.</li>
-                <li><strong className="text-white">Payment Verification:</strong> Manual checking of bank mutations causing confirmation delays.</li>
-                <li><strong className="text-white">Fragmented Scheduling:</strong> Driver and fleet scheduling were not centralized, leading to potential dispatch conflicts.</li>
-                <li><strong className="text-white">No Live Tracking:</strong> Customers could not monitor the real-time location of their rented bus.</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* 2. Proposed Solution (TO-BE) */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Target className="text-green-400 w-8 h-8" /> 2. The TO-BE System Solution
-            </h3>
-            <p className="text-secondary mb-8">
-              We proposed a fully integrated mobile application targeting four main user groups: <strong>Customer, Admin, Operational Staff, and Finance</strong>.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="glass p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-white mb-3">For Customers</h4>
-                <ul className="space-y-2 text-secondary text-sm">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> Online Bus Booking & Payment Gateway</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> Real-time GPS Bus Tracking</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> AI-based Fleet Recommendations</li>
-                </ul>
-              </div>
-              <div className="glass p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-white mb-3">For Management</h4>
-                <ul className="space-y-2 text-secondary text-sm">
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> Centralized Schedule Management</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> Automated Driver Salary Calculation</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> Vehicle Maintenance Monitoring</li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 3. System Analysis & Design */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Activity className="text-blue-400 w-8 h-8" /> 3. System Analysis & Architecture
-            </h3>
-            <div className="space-y-8">
-              <div className="border border-white/10 rounded-2xl p-6 bg-black/20">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Users className="w-5 h-5 text-accent"/> User Personas</h4>
-                <p className="text-secondary text-sm">
-                  Developed distinct personas including <em>Syecka Octavizanie (24, Event Organizer)</em> who needs quick bus availability info, and <em>Azmi Rahadian (32, HR Staff)</em> who requires transparent pricing and reliable corporate billing processes.
-                </p>
-              </div>
-              
-              <div className="border border-white/10 rounded-2xl p-6 bg-black/20">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Database className="w-5 h-5 text-accent"/> Database Architecture (ERD)</h4>
-                <p className="text-secondary text-sm mb-4">
-                  Architected a robust relational database with 8 core entities: Customer, Booking, DetailBooking, Payment, Refund, Vehicle, Driver, and JadwalOperasional.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-white/5 border border-white/10 px-3 py-1 rounded text-xs text-gray-300">tbl_customer</span>
-                  <span className="bg-white/5 border border-white/10 px-3 py-1 rounded text-xs text-gray-300">tbl_booking</span>
-                  <span className="bg-white/5 border border-white/10 px-3 py-1 rounded text-xs text-gray-300">tbl_vehicle</span>
-                  <span className="bg-white/5 border border-white/10 px-3 py-1 rounded text-xs text-gray-300">tbl_driver</span>
-                  <span className="bg-white/5 border border-white/10 px-3 py-1 rounded text-xs text-gray-300">tbl_payment</span>
+              <h4 className="text-white mt-8 mb-4">6 Permasalahan Utama:</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">1. Proses Booking Masih Manual</strong>
+                  Pemesanan bus masih dilakukan melalui WhatsApp dan pencatatan jadwal menggunakan Excel sehingga proses menjadi lambat dan berisiko terjadi double booking.
+                </div>
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">2. Verifikasi Pembayaran Tidak Terintegrasi</strong>
+                  Admin masih melakukan pengecekan pembayaran secara manual melalui mutasi rekening sehingga konfirmasi lama.
+                </div>
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">3. Penjadwalan Belum Terintegrasi</strong>
+                  Penjadwalan armada dan driver masih manual sehingga sering terjadi bentrok jadwal.
+                </div>
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">4. Monitoring Perjalanan Belum Real-Time</strong>
+                  Customer tidak dapat memantau lokasi bus secara langsung.
+                </div>
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">5. Pengelolaan Data Kendaraan Manual</strong>
+                  Data kendaraan & maintenance tersimpan di beberapa file Excel, sulit dipantau.
+                </div>
+                <div className="bg-black/20 p-4 rounded-xl border border-white/5">
+                  <strong className="text-white block mb-1">6. Laporan Operasional Belum Otomatis</strong>
+                  Pembuatan laporan penjualan dan operasional masih manual, tidak real-time.
                 </div>
               </div>
+            </div>
+          </motion.div>
 
-              <div className="border border-white/10 rounded-2xl p-6 bg-black/20">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Activity className="w-5 h-5 text-accent"/> UML Modeling</h4>
+          {/* 2. Ruang Lingkup & Fitur */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
+              <Target className="text-blue-400 w-8 h-8" /> 2. Ruang Lingkup Sistem
+            </h3>
+            <p className="text-secondary mb-8">
+              Sistem informasi berbasis website ini digunakan oleh beberapa aktor utama yaitu: <strong>Customer, Admin, Operational, dan Keuangan</strong>.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="glass p-6 rounded-2xl border-t-4 border-t-blue-500">
+                <h4 className="text-xl font-bold text-white mb-3">Create Booking</h4>
                 <p className="text-secondary text-sm">
-                  Created comprehensive Use Case Diagrams encompassing 12 distinct use cases (from <em>Get Bus Recommendation</em> to <em>Generate Operational Reports</em>), alongside detailed Activity and System Sequence Diagrams.
+                  Pemesanan bus online oleh customer dengan pengecekan ketersediaan jadwal secara otomatis tanpa risiko bentrok.
+                </p>
+              </div>
+              <div className="glass p-6 rounded-2xl border-t-4 border-t-orange-500">
+                <h4 className="text-xl font-bold text-white mb-3">Manage Vehicle</h4>
+                <p className="text-secondary text-sm">
+                  Pengelolaan armada bus dan pencatatan jadwal maintenance kendaraan secara terpusat oleh tim operasional.
+                </p>
+              </div>
+              <div className="glass p-6 rounded-2xl border-t-4 border-t-green-500">
+                <h4 className="text-xl font-bold text-white mb-3">Manage Driver</h4>
+                <p className="text-secondary text-sm">
+                  Mengelola data driver seperti menambah, mengubah, dan melihat informasi driver yang tersedia beserta jadwalnya.
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* 4. UI/UX Prototyping */}
+          {/* 3. Penerapan AI */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
-              <Smartphone className="text-purple-400 w-8 h-8" /> 4. High-Fidelity UI Prototyping
+              <Activity className="text-purple-400 w-8 h-8" /> 3. Penerapan Artificial Intelligence (AI)
             </h3>
-            <p className="text-secondary mb-8">
-              We translated the complex business logic into an intuitive mobile interface. The design focuses on a clean, green-tinted modern aesthetic that inspires trust and ease of use.
-            </p>
-            
-            <div className="grid grid-cols-1 gap-4">
-              <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden border border-white/10 glass">
-                <iframe
-                  style={{ border: "none" }}
-                  width="100%"
-                  height="100%"
-                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FnnKWOPAFkdkCgWYaluzZh9%2FJAYA-MANDIRI-TRANS"
-                  allowFullScreen
-                ></iframe>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border border-purple-500/30 rounded-2xl p-6 bg-purple-900/10">
+                <h4 className="text-xl font-bold text-white mb-2">AI Recommendation Bus</h4>
+                <p className="text-secondary">
+                  Memberikan rekomendasi jenis bus yang paling optimal kepada customer berdasarkan jumlah penumpang dan tujuan perjalanan mereka.
+                </p>
+              </div>
+              <div className="border border-purple-500/30 rounded-2xl p-6 bg-purple-900/10">
+                <h4 className="text-xl font-bold text-white mb-2">AI Smart Scheduling</h4>
+                <p className="text-secondary">
+                  Membantu tim admin dan operasional menentukan jadwal bus dan driver terbaik untuk menghindari terjadinya bentrok jadwal.
+                </p>
               </div>
             </div>
+          </motion.div>
+
+          {/* 4. Benefit & Tim */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h3 className="text-3xl font-display font-bold text-primary mb-6 flex items-center gap-3">
+              <Users className="text-green-400 w-8 h-8" /> 4. Benefit Perusahaan & Project Team
+            </h3>
             
-            <div className="mt-8 text-center">
-              <p className="text-secondary text-sm">
-                *You can interact with the live prototype above directly, or click the link below to open in Figma.
-              </p>
-            </div>
-            
-            <div className="mt-8 text-center">
-              <a href="https://www.figma.com/design/nnKWOPAFkdkCgWYaluzZh9/JAYA-MANDIRI-TRANS" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors">
-                <LinkIcon className="w-4 h-4" /> Open Full Figma Interactive Prototype
-              </a>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="glass p-6 rounded-2xl">
+                <h4 className="text-xl font-bold text-white mb-4">Benefit Untuk Perusahaan</h4>
+                <ul className="space-y-3 text-secondary text-sm">
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Meningkatkan efisiensi operasional</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Mengurangi kesalahan pencatatan data</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Meminimalkan risiko double booking</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Mempercepat proses administrasi & pembayaran</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Memudahkan monitoring secara real-time</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" /> Mempermudah pembuatan laporan bisnis</li>
+                </ul>
+              </div>
+              
+              <div className="glass p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-4">Project Team (Kelompok 12)</h4>
+                  <ul className="space-y-2 text-secondary text-sm mb-6">
+                    <li>• <strong>2702341814</strong> - Syarla Khalilah Utami</li>
+                    <li>• <strong>2702374384</strong> - Budi Wijaya</li>
+                    <li>• <strong>2702351765</strong> - Rendi Ody</li>
+                    <li>• <strong>2702275610</strong> - Felix Hansel William</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <p className="text-xs text-gray-400 mb-1">Supervisor / Dosen Pembimbing:</p>
+                  <p className="text-sm text-white font-medium">VERONICA, S.Kom., M.M.S.I., PSM I, CDAP (D4900)</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
